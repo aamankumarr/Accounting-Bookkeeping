@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Aman Kumar - Professional Bookkeeping and Accounting Support" />
+  <title>Aman Kumar | Bookkeeping & Accounting</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7f9fc;
+      color: #1f2937;
+      line-height: 1.7;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* NAVIGATION */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .nav-container {
+      max-width: 1150px;
+      margin: auto;
+      padding: 18px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      color: #0f172a;
+    }
+
+    .logo span {
+      color: #2563eb;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+    }
+
+    .nav-links a {
+      color: #475569;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover {
+      color: #2563eb;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, #0f172a, #1e3a5f);
+      color: white;
+      padding: 130px 25px 70px;
+    }
+
+    .hero-content {
+      max-width: 1150px;
+      margin: auto;
+      width: 100%;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 6vw, 72px);
+      line-height: 1.1;
+      max-width: 850px;
+      margin-bottom: 25px;
+    }
+
+    .hero h1 span {
+      color: #60a5fa;
+    }
+
+    .hero p {
+      font-size: 19px;
+      color: #cbd5e1;
+      max-width: 750px;
+      margin-bottom: 30px;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 35px;
+    }
+
+    .tag {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      padding: 8px 16px;
+      border-radius: 50px;
+      font-size: 14px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 25px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: 0.3s;
+      margin-right: 10px;
+      margin-top: 8px;
+    }
+
+    .btn-primary {
+      background: #2563eb;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #1d4ed8;
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      border: 1px solid #94a3b8;
+      color: white;
+    }
+
+    .btn-secondary:hover {
+      background: white;
+      color: #0f172a;
+    }
+
+    /* GENERAL */
+    section {
+      padding: 90px 25px;
+    }
+
+    .container {
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    .section-label {
+      color: #2563eb;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 13px;
+      letter-spacing: 1.5px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 40px;
+      line-height: 1.2;
+      margin-bottom: 20px;
+      color: #0f172a;
+    }
+
+    .section-intro {
+      color: #64748b;
+      font-size: 17px;
+      max-width: 750px;
+      margin-bottom: 45px;
+    }
+
+    /* ABOUT */
+    .about {
+      background: white;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .about-text p {
+      margin-bottom: 18px;
+      color: #475569;
+    }
+
+    .stats-card {
+      background: #eff6ff;
+      padding: 35px;
+      border-radius: 15px;
+      border: 1px solid #dbeafe;
+    }
+
+    .stat {
+      margin-bottom: 28px;
+    }
+
+    .stat:last-child {
+      margin-bottom: 0;
+    }
+
+    .stat-number {
+      display: block;
+      font-size: 34px;
+      font-weight: bold;
+      color: #2563eb;
+    }
+
+    .stat-text {
+      color: #64748b;
+    }
+
+    /* CARDS */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 14px;
+      border: 1px solid #e5e7eb;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(15, 23, 42, 0.08);
+    }
+
+    .card-icon {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: #0f172a;
+    }
+
+    .card p {
+      color: #64748b;
+      font-size: 15px;
+    }
+
+    /* SERVICES */
+    .services {
+      background: #f7f9fc;
+    }
+
+    /* SOFTWARE */
+    .software {
+      background: white;
+    }
+
+    .software-box {
+      background: #0f172a;
+      padding: 40px;
+      border-radius: 15px;
+      color: white;
+    }
+
+    .software-box h3 {
+      margin-bottom: 20px;
+      font-size: 22px;
+    }
+
+    .software-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .software-tag {
+      background: #1e293b;
+      border: 1px solid #334155;
+      padding: 10px 18px;
+      border-radius: 8px;
+      color: #e2e8f0;
+    }
+
+    /* WHY ACCOUNTING */
+    .importance {
+      background: #eff6ff;
+    }
+
+    .importance-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .importance-item {
+      background: white;
+      padding: 22px;
+      border-radius: 10px;
+      border-left: 4px solid #2563eb;
+      color: #475569;
+    }
+
+    /* WHY CHOOSE ME */
+    .choose {
+      background: white;
+    }
+
+    /* WHAT I BRING */
+    .bring {
+      background: #f8fafc;
+    }
+
+    .bring-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    /* WORK SAMPLES */
+    .portfolio {
+      background: white;
+    }
+
+    .sample-card {
+      border: 1px solid #e2e8f0;
+      border-radius: 14px;
+      overflow: hidden;
+      background: white;
+    }
+
+    .sample-preview {
+      height: 180px;
+      background: linear-gradient(135deg, #dbeafe, #f8fafc);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 55px;
+    }
+
+    .sample-content {
+      padding: 25px;
+    }
+
+    .sample-content h3 {
+      margin-bottom: 8px;
+    }
+
+    .sample-content p {
+      color: #64748b;
+      font-size: 15px;
+    }
+
+    /* CONTACT */
+    .contact {
+      background: #0f172a;
+      color: white;
+      text-align: center;
+    }
+
+    .contact h2 {
+      color: white;
+    }
+
+    .contact p {
+      color: #cbd5e1;
+      max-width: 650px;
+      margin: 0 auto 25px;
+    }
+
+    .contact-details {
+      margin-top: 25px;
+    }
+
+    .contact-details a {
+      color: #93c5fd;
+      display: block;
+      margin: 10px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #020617;
+      color: #94a3b8;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 850px) {
+      .nav-links {
+        display: none;
+      }
+
+      .about-grid,
+      .card-grid,
+      .bring-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .importance-grid {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 65px 20px;
+      }
+
+      h2 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="nav-container">
+      <div class="logo">Aman <span>Kumar</span></div>
+
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#choose">Why Me</a>
+        <a href="#work">Work Samples</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+
+      <h1>
+        Accurate Books.<br>
+        <span>Clear Financials.</span><br>
+        Better Business Decisions.
+      </h1>
+
+      <p>
+        I'm Aman Kumar, a detail-oriented accountant and bookkeeper
+        providing professional bookkeeping and accounting support for
+        businesses and accounting professionals.
+      </p>
+
+      <div class="hero-tags">
+        <div class="tag">3+ Years of Experience</div>
+        <div class="tag">U.S. Accounting Support</div>
+        <div class="tag">Bookkeeping</div>
+        <div class="tag">Financial Reporting</div>
+      </div>
+
+      <a href="#contact" class="btn btn-primary">Let's Work Together</a>
+      <a href="#about" class="btn btn-secondary">Learn More</a>
+
+    </div>
+  </section>
+
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="container">
+
+      <div class="about-grid">
+
+        <div class="about-text">
+          <div class="section-label">About Me</div>
+
+          <h2>Professional Accounting Support You Can Rely On</h2>
+
+          <p>
+            Hi, I'm <strong>Aman Kumar</strong>, a detail-oriented
+            accountant and bookkeeper with 3+ years of experience
+            supporting U.S. accounting operations.
+          </p>
+
+          <p>
+            I help businesses and accounting professionals maintain
+            accurate, organized, and up-to-date financial records.
+            My experience includes bookkeeping, bank and credit card
+            reconciliations, Accounts Payable, Accounts Receivable,
+            payroll support, journal entries, accruals, amortizations,
+            financial reporting, and month-end close support.
+          </p>
+
+          <p>
+            My approach is simple: focus on accuracy, identify
+            discrepancies, keep financial information organized, and
+            deliver reliable work in a timely manner.
+          </p>
+        </div>
+
+        <div class="stats-card">
+          <div class="stat">
+            <span class="stat-number">3+</span>
+            <span class="stat-text">Years of Accounting Experience</span>
+          </div>
+
+          <div class="stat">
+            <span class="stat-number">U.S.</span>
+            <span class="stat-text">Accounting Operations Experience</span>
+          </div>
+
+          <div class="stat">
+            <span class="stat-number">100%</span>
+            <span class="stat-text">Focused on Accuracy & Reliability</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- WHY ACCOUNTING MATTERS -->
+  <section class="importance">
+    <div class="container">
+
+      <div class="section-label">Why Accounting Matters</div>
+      <h2>Good Accounting Is More Than Recording Numbers</h2>
+
+      <p class="section-intro">
+        Accurate accounting helps business owners understand what is
+        really happening inside their business. Organized financial
+        records provide clarity and support better decisions.
+      </p>
+
+      <div class="importance-grid">
+
+        <div class="importance-item">
+          ✓ Understand where money is coming from and where it is going
+        </div>
+
+        <div class="importance-item">
+          ✓ Monitor profitability and control unnecessary expenses
+        </div>
+
+        <div class="importance-item">
+          ✓ Identify errors and discrepancies early
+        </div>
+
+        <div class="importance-item">
+          ✓ Make better financial decisions with confidence
+        </div>
+
+        <div class="importance-item">
+          ✓ Stay organized for tax preparation and reporting
+        </div>
+
+        <div class="importance-item">
+          ✓ Save time during month-end and year-end close
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="container">
+
+      <div class="section-label">My Services</div>
+      <h2>Accounting & Bookkeeping Support</h2>
+
+      <p class="section-intro">
+        I provide practical accounting support across key areas of
+        the financial process.
+      </p>
+
+      <div class="card-grid">
+
+        <div class="card">
+          <div class="card-icon">📚</div>
+          <h3>Full-Cycle Bookkeeping</h3>
+          <p>
+            Organized bookkeeping support to help maintain accurate
+            and up-to-date financial records.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">🏦</div>
+          <h3>Bank Reconciliation</h3>
+          <p>
+            Bank and credit card reconciliations to identify
+            discrepancies and maintain transaction accuracy.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">💳</div>
+          <h3>AP & AR</h3>
+          <p>
+            Support with Accounts Payable and Accounts Receivable
+            management and financial organization.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">📊</div>
+          <h3>Financial Reporting</h3>
+          <p>
+            Support with Profit & Loss, Balance Sheet, Cash Flow,
+            management reports, and financial analysis.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">📅</div>
+          <h3>Month-End Close</h3>
+          <p>
+            Support for month-end, quarter-end, and year-end
+            accounting processes.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">💰</div>
+          <h3>Payroll Support</h3>
+          <p>
+            Payroll processing support, payroll postings, and
+            accounting-related journal entries.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">🧾</div>
+          <h3>Journal Entries</h3>
+          <p>
+            Adjusting journal entries, accruals, amortizations,
+            and other accounting entries.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">🧹</div>
+          <h3>Clean-Up & Catch-Up</h3>
+          <p>
+            Help organize financial records and bring bookkeeping
+            up to date.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">📈</div>
+          <h3>Excel & Analysis</h3>
+          <p>
+            Financial data organization and Excel-based analysis
+            using tools such as PivotTables and VLOOKUP.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- SOFTWARE -->
+  <section class="software">
+    <div class="container">
+
+      <div class="section-label">Tools & Platforms</div>
+      <h2>Accounting Software & Technology</h2>
+
+      <p class="section-intro">
+        I have hands-on experience with accounting and payroll
+        software and am familiar with additional business and
+        financial platforms.
+      </p>
+
+      <div class="software-box">
+
+        <h3>Hands-On Experience</h3>
+
+        <div class="software-tags">
+          <div class="software-tag">QuickBooks Online</div>
+          <div class="software-tag">QuickBooks Desktop</div>
+          <div class="software-tag">Xero</div>
+          <div class="software-tag">NetSuite</div>
+          <div class="software-tag">ADP</div>
+          <div class="software-tag">Gusto</div>
+          <div class="software-tag">Microsoft Excel</div>
+        </div>
+
+        <br><br>
+
+        <h3>Familiar With</h3>
+
+        <div class="software-tags">
+          <div class="software-tag">Deel</div>
+          <div class="software-tag">Stripe</div>
+          <div class="software-tag">Rippling</div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- WHY CHOOSE ME -->
+  <section class="choose" id="choose">
+    <div class="container">
+
+      <div class="section-label">Why Choose Me</div>
+      <h2>Why Clients Can Trust Me</h2>
+
+      <div class="card-grid">
+
+        <div class="card">
+          <div class="card-icon">✓</div>
+          <h3>Detail-Oriented</h3>
+          <p>
+            I carefully review financial information and focus on
+            identifying discrepancies to maintain accurate records.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">🇺🇸</div>
+          <h3>U.S. Accounting Experience</h3>
+          <p>
+            Practical experience supporting U.S. accounting
+            operations and accounting processes for a U.S. CPA firm.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">⚙️</div>
+          <h3>Strong Technical Knowledge</h3>
+          <p>
+            Experience with multiple accounting and payroll
+            systems and a strong ability to learn new platforms.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">📋</div>
+          <h3>Organized & Reliable</h3>
+          <p>
+            I understand the importance of organized records,
+            clear communication, and timely delivery.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">🔎</div>
+          <h3>Problem-Solving Mindset</h3>
+          <p>
+            When accounting issues arise, I focus on understanding
+            the cause and finding practical solutions.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">🤝</div>
+          <h3>CPA Firm Support</h3>
+          <p>
+            Experience supporting accounting operations including
+            postings, reconciliations, reporting, and payroll.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- WHAT I BRING -->
+  <section class="bring">
+    <div class="container">
+
+      <div class="section-label">What I Bring</div>
+      <h2>More Than Bookkeeping</h2>
+
+      <p class="section-intro">
+        I aim to be a reliable part of your accounting process and
+        help bring greater accuracy, organization, and clarity to
+        your financial operations.
+      </p>
+
+      <div class="bring-grid">
+
+        <div class="card">
+          <h3>🎯 Accuracy</h3>
+          <p>
+            Careful attention to transactions, reconciliations,
+            and financial records.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>📁 Organization</h3>
+          <p>
+            Clean, structured, and easy-to-understand financial
+            information.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>⚡ Efficiency</h3>
+          <p>
+            A focus on improving processes and reducing unnecessary
+            delays in accounting workflows.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>📊 Financial Clarity</h3>
+          <p>
+            Financial information that helps businesses better
+            understand their financial position.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>🤝 Reliability</h3>
+          <p>
+            A dependable professional who takes responsibility
+            for assigned work.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>📚 Continuous Learning</h3>
+          <p>
+            A commitment to developing technical skills and
+            continuously improving accounting knowledge.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- WORK SAMPLES -->
+  <section class="portfolio" id="work">
+    <div class="container">
+
+      <div class="section-label">Portfolio</div>
+      <h2>My Work Samples</h2>
+
+      <p class="section-intro">
+        Explore sample projects that demonstrate my approach to
+        financial organization, reconciliation, reporting, and
+        Excel-based accounting support.
+      </p>
+
+      <div class="card-grid">
+
+        <div class="sample-card">
+          <div class="sample-preview">🏦</div>
+          <div class="sample-content">
+            <h3>Bank Reconciliation</h3>
+            <p>
+              Sample reconciliation work demonstrating transaction
+              matching and discrepancy identification.
+            </p>
+          </div>
+        </div>
+
+        <div class="sample-card">
+          <div class=
