@@ -938,6 +938,76 @@
         I'd be happy to discuss how I can support your business.
       </p>
 
+
+      <!-- CLIENT INQUIRY FORM -->
+      <div class="contact-form-wrap">
+        <div class="contact-form-title">Tell Me About Your Accounting Needs</div>
+        <div class="contact-form-subtitle">
+          Share a few details and I'll get back to you directly.
+        </div>
+
+        <form class="contact-form"
+              action="https://formspree.io/f/xzebzvew"
+              method="POST"
+              target="_top">
+
+          <input type="hidden" name="_subject" value="New Client Inquiry - Aman Kumar">
+
+          <div class="contact-field">
+            <label for="client-name">Full Name *</label>
+            <input id="client-name" name="name" type="text"
+                   placeholder="Your full name" required>
+          </div>
+
+          <div class="contact-field">
+            <label for="company-name">Company Name</label>
+            <input id="company-name" name="company" type="text"
+                   placeholder="Your company name">
+          </div>
+
+          <div class="contact-field">
+            <label for="client-email">Email Address *</label>
+            <input id="client-email" name="email" type="email"
+                   placeholder="you@example.com" required>
+          </div>
+
+          <div class="contact-field">
+            <label for="client-phone">Phone Number</label>
+            <input id="client-phone" name="phone" type="tel"
+                   placeholder="+1 / +91 ...">
+          </div>
+
+          <div class="contact-field full">
+            <label for="service-needed">Service Needed *</label>
+            <select id="service-needed" name="service" required>
+              <option value="" disabled selected>Select a service</option>
+              <option>Full-Cycle Bookkeeping</option>
+              <option>Bank / Credit Card Reconciliation</option>
+              <option>Accounts Payable / Accounts Receivable</option>
+              <option>Financial Reporting</option>
+              <option>Month-End / Year-End Close</option>
+              <option>Payroll Accounting Support</option>
+              <option>Clean-Up / Catch-Up Bookkeeping</option>
+              <option>Excel & Financial Analysis</option>
+              <option>Other Accounting Support</option>
+            </select>
+          </div>
+
+          <div class="contact-field full">
+            <label for="client-message">How Can I Help? *</label>
+            <textarea id="client-message" name="message"
+              placeholder="Tell me briefly about your accounting needs, current situation, or project."
+              required></textarea>
+          </div>
+
+          <button class="contact-submit" type="submit">Send Inquiry</button>
+
+          <div class="contact-note">
+            Your information is used only to respond to your inquiry.
+          </div>
+        </form>
+      </div>
+
       <div class="contact-buttons">
         <a href="mailto:aamankumar1098@gmail.com" class="btn btn-primary">
           Email Me
@@ -1012,6 +1082,106 @@
 
     .portfolio-note p {
       margin: 0;
+    }
+
+
+    /* CLIENT INQUIRY FORM */
+    .contact-form-wrap {
+      max-width: 850px;
+      margin: 35px auto 10px;
+      padding: 30px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 16px;
+      text-align: left;
+      backdrop-filter: blur(8px);
+    }
+    .contact-form-title {
+      font-size: 22px;
+      margin-bottom: 8px;
+      color: white;
+    }
+    .contact-form-subtitle {
+      color: #cbd5e1;
+      font-size: 14px;
+      margin-bottom: 22px;
+    }
+    .contact-form {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+    .contact-field {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+    .contact-field.full {
+      grid-column: 1 / -1;
+    }
+    .contact-field label {
+      color: #e2e8f0;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .contact-field input,
+    .contact-field select,
+    .contact-field textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid #475569;
+      border-radius: 8px;
+      background: #ffffff;
+      color: #0f172a;
+      font-family: inherit;
+      font-size: 14px;
+      outline: none;
+    }
+    .contact-field textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+    .contact-field input:focus,
+    .contact-field select:focus,
+    .contact-field textarea:focus {
+      border-color: #60a5fa;
+      box-shadow: 0 0 0 3px rgba(96,165,250,0.18);
+    }
+    .contact-submit {
+      grid-column: 1 / -1;
+      margin-top: 4px;
+      padding: 14px 22px;
+      border: none;
+      border-radius: 8px;
+      background: #2563eb;
+      color: white;
+      font-size: 15px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .contact-submit:hover {
+      background: #1d4ed8;
+      transform: translateY(-2px);
+    }
+    .contact-note {
+      grid-column: 1 / -1;
+      color: #94a3b8;
+      font-size: 12px;
+      margin-top: -5px;
+    }
+    @media (max-width: 650px) {
+      .contact-form {
+        grid-template-columns: 1fr;
+      }
+      .contact-field.full,
+      .contact-submit,
+      .contact-note {
+        grid-column: auto;
+      }
+      .contact-form-wrap {
+        padding: 22px;
+      }
     }
 
     .contact-buttons {
