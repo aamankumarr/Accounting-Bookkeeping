@@ -291,6 +291,26 @@
       gap: 12px;
     }
 
+
+    /* Reliable local-style logo badges for software without CDN image dependency */
+    .software-logo-ns, .software-logo-excel, .software-logo-deel, .software-logo-rippling {
+      display: inline-flex;
+      width: 22px;
+      height: 22px;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 22px;
+      border-radius: 5px;
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .software-logo-ns { background: #00a1e0; color: #fff; }
+    .software-logo-excel { background: #217346; color: #fff; }
+    .software-logo-deel { background: #111827; color: #fff; border-radius: 50%; }
+    .software-logo-rippling { background: #5b5bd6; color: #fff; border-radius: 6px; }
+
     .software-tag {
       display: inline-flex;
       align-items: center;
@@ -710,13 +730,13 @@
           <div class="software-tag"><img class="software-logo" src="https://cdn.simpleicons.org/quickbooks/2CA01C" alt="QuickBooks logo">QuickBooks Online</div>
           <div class="software-tag"><img class="software-logo" src="https://cdn.simpleicons.org/quickbooks/2CA01C" alt="QuickBooks logo">QuickBooks Desktop</div>
           <div class="software-tag"><img class="software-logo" src="https://cdn.simpleicons.org/xero/13B5EA" alt="Xero logo">Xero</div>
-          <div class="software-tag"><img class="software-logo" src="https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/oraclenetsuite.svg" alt="NetSuite logo">NetSuite</div>
+          <div class="software-tag"><span class="software-logo software-logo-ns" aria-label="NetSuite logo">N</span>NetSuite</div>
           <div class="software-tag"><img class="software-logo" src="https://cdn.simpleicons.org/adp/D0271D" alt="ADP logo">ADP</div>
           <div class="software-tag"><img class="software-logo" src="https://cdn.simpleicons.org/gusto/F45D48" alt="Gusto logo">Gusto</div>
-          <div class="software-tag"><img class="software-logo" src="https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/microsoftexcel.svg" alt="Microsoft Excel logo">Microsoft Excel</div>
-          <div class="software-tag"><img class="software-logo" src="https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/deel.svg" alt="Deel logo">Deel</div>
+          <div class="software-tag"><span class="software-logo software-logo-excel" aria-label="Microsoft Excel logo">X</span>Microsoft Excel</div>
+          <div class="software-tag"><span class="software-logo software-logo-deel" aria-label="Deel logo">D</span>Deel</div>
           <div class="software-tag"><img class="software-logo" src="https://cdn.simpleicons.org/stripe/635BFF" alt="Stripe logo">Stripe</div>
-          <div class="software-tag"><img class="software-logo" src="https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/rippling.svg" alt="Rippling logo">Rippling</div>
+          <div class="software-tag"><span class="software-logo software-logo-rippling" aria-label="Rippling logo">R</span>Rippling</div>
         </div>
 
       </div>
